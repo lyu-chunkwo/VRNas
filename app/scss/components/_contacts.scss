@@ -1,0 +1,34 @@
+.contacts {
+  padding-top: clamp(30px, 5vw, 64px);
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: clamp(30px, 20vw, 150px);
+  }
+
+  &__item {
+    max-width: 380px;
+    width: 100%;
+    padding: 55px 65px 58px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-size: 20px;
+    color: var(--greyscale-white);
+
+    &:hover {
+      color: var(--greyscale-white);
+    }
+  }
+}

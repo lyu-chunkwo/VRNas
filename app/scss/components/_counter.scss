@@ -1,0 +1,23 @@
+.counter {
+  padding: 59px 0;
+  margin-top: clamp(30px, 20vw, 150px);
+  margin-bottom: clamp(30px, 20vw, 50px);
+  background-image: url(../images/result/counter/counter-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 250px;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}

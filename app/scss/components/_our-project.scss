@@ -1,0 +1,80 @@
+.our-project {
+  padding-top: clamp(30px, 20vw, 150px);
+  background-image: url(../images/result/our-project/spot.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  margin-bottom: 50px;
+
+  &__top {
+    max-width: 890px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__video-box {
+    margin-bottom: 48px;
+  }
+
+  &__video-link {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/result/our-project/project-play.png);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: border-color 0.5s ease;
+    }
+
+    &:hover {
+      &::after {
+        border-color: var(--alerts-error);
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 12px 12px 0 0;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 52px;
+    left: 34px;
+  }
+
+  &__badge {
+    margin-bottom: 12px;
+  }
+
+  &__video-title {
+    font-size: 36px;
+    @extend %chakra-500;
+    color: var(--greyscale-white);
+  }
+
+  &__link {
+    padding: 15px 38px;
+    width: 198px;
+    margin: 0 auto;
+    display: block;
+  }
+}

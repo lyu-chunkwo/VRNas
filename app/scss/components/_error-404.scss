@@ -1,0 +1,34 @@
+.error-404 {
+  padding-top: clamp(30px, 20vw, 96px);
+  padding-bottom: clamp(30px, 20vw, 150px);
+  background-image: url(../images/result/404/error-bg.png);
+  background-repeat: no-repeat;
+  background-position: top 33px right;
+
+  &__inner {
+    max-width: 625px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text-box {
+    @extend %chakra-300;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  &__items {
+    padding-left: 30px;
+    list-style-type: disc;
+
+    &:nth-child(4) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link {
+    padding: 15px 38px;
+  }
+}

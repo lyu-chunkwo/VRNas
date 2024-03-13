@@ -1,0 +1,49 @@
+.started {
+  padding-top: clamp(30px, 20vw, 150px);
+  margin-bottom: clamp(30px, 20vw, 100px);
+  text-align: center;
+  background-image: url(../images/result/started/started-light.png);
+  background-repeat: no-repeat;
+  background-position: top 100px left 30px;
+
+  &__section-title {
+    display: inline-block;
+  }
+
+  &__title {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+
+  &__link-box {
+    position: relative;
+  }
+
+  &__video-link {
+    margin-bottom: 48px;
+    display: block;
+  }
+
+  &__video-img {
+    border-radius: 12px;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 52px;
+    left: 34px;
+    text-align-last: left;
+  }
+
+  &__badge {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 36px;
+    color: var(--greyscale-white);
+    @extend %chakra-500;
+    line-height: 1.22;
+  }
+}

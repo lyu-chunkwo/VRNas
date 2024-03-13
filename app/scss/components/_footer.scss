@@ -1,0 +1,120 @@
+.footer {
+  padding-top: 67px;
+  background-image: url(../images/result/footer/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  &__inner {
+    padding-top: clamp(30px, 20vw, 115px);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 33px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: var(--gradient);
+    color: var(--greyscale-white);
+    transition: border-image 0.5s ease;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  &__item {
+    &:nth-child(1) {
+      max-width: 246px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 32px;
+    }
+
+    &:nth-child(4) {
+      max-width: 335px;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    @extend %chakra-600;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    color: var(--greyscale-white);
+  }
+
+  &__contacts {
+    li {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        .footer__menu-link {
+          position: relative;
+          padding-left: 36px;
+
+          &::before {
+            content: "";
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:nth-child(1) {
+          .footer__menu-link {
+            &::before {
+              background-image: url(../images/result/sprite/sprite.svg#location);
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .footer__menu-link {
+          &::before {
+            background-image: url(../images/result/sprite/sprite.svg#email);
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .footer__menu-link {
+          &::before {
+            background-image: url(../images/result/sprite/sprite.svg#phone);
+          }
+        }
+      }
+    }
+  }
+
+  &__menu-item {
+    @extend %chakra-300;
+    line-height: 1.75;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu-link {
+    color: var(--greyscale-white);
+    transition: color 0.5s ease;
+  }
+
+  &__bottom {
+    @extend %chakra-300;
+    color: var(--greyscale-white);
+    padding: 32px 0 40px;
+    text-align: center;
+  }
+}

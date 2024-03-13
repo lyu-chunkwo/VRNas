@@ -1,0 +1,71 @@
+.about {
+  padding-top: clamp(30px, 20vw, 120px);
+  background-image: url(../images/result/about/about-light.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img-box {
+    position: relative;
+    max-width: 543px;
+  }
+
+  &__video-link {
+    position: absolute;
+    right: 26px;
+    bottom: -23px;
+
+    &:hover {
+      .play-svg {
+        fill: var(--alerts-error);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 565px;
+  }
+
+  &__section-title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @extend %chakra-300;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  &__benefits {
+    margin-bottom: 32px;
+  }
+
+  &__benefits-item {
+    margin-bottom: 14px;
+    line-height: 1.75;
+    color: var(--greyscale-white);
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 18px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/result/sprite/sprite.svg#check);
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

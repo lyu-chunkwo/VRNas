@@ -1,0 +1,48 @@
+.about-us {
+  padding-top: clamp(30px, 20vw, 150px);
+  background-image: url(../images/result/banner/banner-light.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  &__wrap {
+    background-image: url(../images/result/about/assets.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(50px, 20vw, 190px);
+  }
+
+  &__text-box {
+    max-width: 625px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__img-box {
+    position: relative;
+  }
+
+  &__link {
+    display: inline-block;
+    position: absolute;
+    bottom: -40px;
+    left: -80px;
+    width: 196px;
+    height: 128px;
+    object-fit: cover;
+  }
+
+  &__bottom-top {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 54px;
+  }
+}

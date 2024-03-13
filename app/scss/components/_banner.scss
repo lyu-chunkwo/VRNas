@@ -1,0 +1,95 @@
+.banner {
+  padding-top: 15px;
+  background-image: url(../images/result/sprite/sprite.svg#assets);
+  background-repeat: no-repeat;
+  background-position: left bottom 105px;
+
+  &__wrap {
+    background-image: url(../images/result/sprite/sprite.svg#light-main-decor);
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__textbox {
+    max-width: 560px;
+  }
+
+  &__title {
+    font-size: 64px;
+    @extend %chakra-600;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @extend %chakra-300;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    margin-bottom: 42px;
+  }
+
+  &__textbox-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-box {
+    position: relative;
+  }
+
+  &__clients-img {
+    display: inline;
+    margin-right: -15px;
+  }
+
+  &__textbox-descr {
+    padding-left: 30px;
+    display: flex;
+
+    p {
+      @extend %chakra-300;
+    }
+  }
+
+  &__num {
+    @extend %chakra-600;
+    color: var(--greyscale-white);
+    margin-right: 5px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 8px;
+      bottom: -1px;
+      left: -5px;
+      background-image: url(../images/result/banner/element.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__video-link {
+    position: relative;
+
+    &:hover {
+      .play-svg {
+        fill: var(--alerts-error);
+      }
+    }
+  }
+}

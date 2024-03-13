@@ -1,0 +1,75 @@
+.page-header {
+  &__inner {
+    background-image: url(../images/result/header/header-light.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 90px 0;
+    text-align: center;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    &--single {
+      background-image: none !important;
+      padding: 51px 0;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    @extend %chakra-600;
+    color: var(--greyscale-white);
+    margin-bottom: 29px;
+
+    &--single {
+      display: none;
+    }
+  }
+
+  &__breadcrumbs-items {
+    display: flex;
+    justify-content: center;
+
+    &--single {
+      justify-content: flex-start;
+    }
+  }
+
+  &__breadcrumbs-item {
+    margin-right: 10px;
+    padding-right: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/result/sprite/sprite.svg#right);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      pointer-events: none;
+
+      &::after {
+        display: none;
+      }
+
+      .page-header__breadcrumbs-link {
+        @extend %chakra-300;
+        color: var(--greyscale-grey-1);
+      }
+    }
+  }
+
+  &__breadcrumbs-link {
+    @extend %chakra-600;
+    color: var(--greyscale-white);
+  }
+}

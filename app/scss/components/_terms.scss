@@ -1,0 +1,48 @@
+.terms {
+  padding-top: clamp(30px, 20vw, 137px);
+  margin-bottom: clamp(30px, 20vw, 150px);
+  background-image: url(../images/result/terms/terms-bg.png);
+  background-repeat: no-repeat;
+  background-position: top 137px center;
+
+  &__inner {
+    max-width: 790px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__content-box {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content-title {
+    font-size: 20px;
+    @extend %chakra-500;
+    color: var(--greyscale-white);
+    margin-bottom: 16px;
+  }
+
+  &__content-text {
+    @extend %chakra-300;
+    line-height: 1.75;
+  }
+
+  &__content-items {
+    list-style-type: disc;
+    padding-left: 30px;
+  }
+}

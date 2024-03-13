@@ -1,0 +1,144 @@
+.testimonial {
+  padding-top: clamp(30px, 20vw, 100px);
+  margin-bottom: clamp(30px, 20vw, 150px);
+  background-image: url(../images/result/testimonial/bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1247px 1247px;
+  height: 1247px;
+  width: 100%;
+
+  &__wrap {
+    height: 1247px;
+    position: relative;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__section-title {
+    display: inline-block;
+  }
+
+  &__user-item {
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      top: 250px;
+      left: 4px;
+    }
+
+    &:nth-child(2) {
+      top: 200px;
+      right: 360px;
+    }
+
+    &:nth-child(3) {
+      top: 500px;
+      right: 125px;
+    }
+
+    &:nth-child(4) {
+      bottom: 290px;
+      left: 220px;
+    }
+
+    &:nth-child(5) {
+      bottom: 418px;
+      left: 560px;
+    }
+
+    &:nth-child(6) {
+      bottom: 187px;
+      right: 210px;
+    }
+
+    &:hover {
+      .testimonial__text-box {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img-box {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+
+    &::before {
+      top: -12px;
+      left: -12px;
+      background-image: url(../images/result/testimonial/monochrome-bg.png);
+    }
+
+    &::after {
+      width: 98px;
+      height: 87px;
+      top: -19px;
+      left: -23px;
+      background-image: url(../images/result/testimonial/gradient-bg.png);
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover {
+      &::before {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &::after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__user-img {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text-box {
+    visibility: hidden;
+    opacity: 0;
+    width: 297px;
+    padding: 18px 18px 14px 23px;
+    font-size: 12px;
+    line-height: 2;
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../images/result/testimonial/text-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__user {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    span {
+      color: var(--greyscale-white);
+    }
+  }
+}

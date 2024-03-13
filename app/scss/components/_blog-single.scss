@@ -1,0 +1,154 @@
+.blog-single {
+  margin-bottom: clamp(30px, 20vw, 140px);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 790px;
+  }
+
+  &__badge {
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 40px;
+    max-width: 660px;
+    margin-bottom: 12px;
+  }
+
+  &__meta {
+    display: inline-block;
+    @extend %chakra-500;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    width: clamp(290px, 100%, 790px);
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  &__text-box {
+    p {
+      margin-bottom: 24px;
+      @extend %chakra-300;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text-imgbox {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  &__text-img {
+    width: clamp(290px, 100%, 377px);
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__footer {
+    padding-top: 24px;
+  }
+
+  &__footer-title {
+    font-size: 16px;
+    @extend %chakra-600;
+    margin-bottom: 12px;
+  }
+
+  &__meta-tags {
+    margin-bottom: 17px;
+  }
+
+  &__meta-tag {
+    @extend %chakra-300;
+    background: linear-gradient(to right, #19b5f1 0%, #ca6aeb 85%);
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  &__share-items {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__aside {
+    max-width: 335px;
+    width: 100%;
+  }
+
+  &__aside-title {
+    font-size: 20px;
+    @extend %chakra-500;
+    margin-bottom: 23px;
+    color: var(--greyscale-white);
+  }
+
+  &__blog-items {
+    margin-bottom: 64px;
+  }
+
+  &__blog-item {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 0.75px solid rgba(255, 255, 255, 0.15);
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__aside-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__blog-img {
+    width: 102px;
+    height: auto;
+  }
+
+  &__aside-textbox {
+    width: 213px;
+  }
+
+  &__theme-name {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    font-size: 12px;
+    color: var(--greyscale-white);
+  }
+
+  &__hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__aside-badge {
+    font-size: 10px;
+    @extend %chakra-500;
+    padding: 2px 8px;
+  }
+}

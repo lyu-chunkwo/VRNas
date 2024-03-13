@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.webp" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.webp" type="image/x-icon" />
+  <title>VRNas/Team</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="scroll">
+
+  <header class="header">
+    @include('partials/header.html')
+  </header>
+
+  <main class="main">
+    @include('partials/team-header.html')
+    @include('partials/team-all.html')
+    @include('partials/counter.html')
+    @include('partials/section-footer.html')
+  </main>
+
+  <footer class="footer">
+    @include('partials/footer.html')
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

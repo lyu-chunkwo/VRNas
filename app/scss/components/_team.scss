@@ -1,0 +1,87 @@
+.team {
+  margin-bottom: clamp(30px, 20vw, 150px);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
+  }
+
+  &__top-link {
+    align-self: flex-end;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    background-color: var(--greyscale-black-80);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__item {
+    padding: 9px;
+    background-color: rgba(37, 37, 50, 0.6);
+    transition: border-image 0.5s ease;
+    position: relative;
+
+    &:hover {
+      border-width: 1px;
+      border-style: solid;
+      border-image: var(--gradient);
+      color: var(--greyscale-white);
+
+      .team__member-position {
+        color: var(--greyscale-grey-1);
+      }
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 55;
+      background: linear-gradient(180deg, rgba(50, 70, 188, 0), rgb(25, 40, 131) 100%);
+    }
+  }
+
+  &__img {
+    width: 275px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__text-box {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  &__member-name {
+    @extend %chakra-600;
+    line-height: 1.75;
+    color: var(--greyscale-white);
+    display: block;
+  }
+
+  &__member-position {
+    font-size: 12px;
+    line-height: 1.67;
+    display: block;
+    color: var(--greyscale-grey-1);
+  }
+}
